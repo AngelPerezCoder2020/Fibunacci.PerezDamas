@@ -46,13 +46,15 @@ namespace Fibunacci.PerezDamas
         }
         private static int suma(int a, int b, int c)
         {
-            if(c<1){
+            int profundidad = 0;
+
+            if(profundidad == c){
                 Console.WriteLine($"{c} ");
                 return c;
             }
             else{
-                c --;
-                if(c == 0){
+                profundidad ++;
+                if(profundidad == c){
                     int n = a;
                     int m = b;
 
