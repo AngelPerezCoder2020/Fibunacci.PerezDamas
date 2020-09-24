@@ -55,14 +55,11 @@ namespace Fibunacci.PerezDamas
                 profundidad ++;
                 int n = a;
                 int m = b;
-
                 a = m;
                 b = n+m;
-
-                Console.WriteLine($"Valor de C = {c}, la profundidad es: {profundidad}, Valor de a = {a}, Valor de b = {b}");
                 int r = b + suma(a,b,c,profundidad);
                 Console.WriteLine($"{a} ");
-                return r;
+                return a;
             }
         }
     }
