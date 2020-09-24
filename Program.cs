@@ -23,7 +23,8 @@ namespace Fibunacci.PerezDamas
                             int rep = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine(" \n \nEnter to Watch ur result...");
                             Console.ReadKey();
-                            Console.WriteLine($"El Ultimo Resultado de tu Algoritmo es: {suma(0,1,rep,profundidad)}");
+                            if(suma(0,1,rep,profundidad)==1)
+                                Console.WriteLine(0);
                             Console.ReadKey();
                             do{
                                 Console.Clear();
@@ -47,10 +48,8 @@ namespace Fibunacci.PerezDamas
         }
         private static int suma(int a, int b, int c, int profundidad)
         {
-            if(profundidad == c){
-                Console.WriteLine(0);
+            if(profundidad == c)
                 return 0;
-            }
             else{
                 profundidad ++;
                 int n = a;
