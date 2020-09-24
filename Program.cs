@@ -24,7 +24,7 @@ namespace Fibunacci.PerezDamas
                             Console.WriteLine(" \n \nEnter to Watch ur result...");
                             Console.ReadKey();
                             Console.WriteLine(" ");
-                            Console.WriteLine(0);
+                            Console.Write("0 ");
                             suma(0,1,rep,profundidad);
                             Console.ReadKey();
                             do{
