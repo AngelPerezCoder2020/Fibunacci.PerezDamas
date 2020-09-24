@@ -24,6 +24,7 @@ namespace Fibunacci.PerezDamas
                             Console.WriteLine(" \n \nEnter to Watch ur result...");
                             Console.ReadKey();
                             Console.WriteLine(" ");
+                            Console.WriteLine(0);
                             suma(0,1,rep,profundidad);
                             Console.ReadKey();
                             do{
@@ -50,14 +51,14 @@ namespace Fibunacci.PerezDamas
         private static void suma(int a, int b, int c, int profundidad)
         {
             if(profundidad == c)
-                Console.WriteLine(0);
+                Console.WriteLine("");
             else{
                 profundidad ++;
                 int n = a;
                 int m = b;
                 a = m;
                 b = n+m;
-                Console.WriteLine($"{a} ");
+                Console.Write($"{a} ");
                 suma(a,b,c,profundidad);
             }
         }
