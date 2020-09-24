@@ -20,7 +20,7 @@ namespace Fibunacci.PerezDamas
                         do{
                             Console.Clear();
                             Console.WriteLine("How many times do u want algoritm to repeat? ");
-                            int rep = Convert.ToInt32(Console.ReadLine()) + 1;
+                            int rep = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine(" \n \nEnter to Watch ur result...");
                             Console.ReadKey();
                             Console.WriteLine($"El Ultimo Resultado de tu Algoritmo es: {suma(0,1,rep,profundidad)}");
@@ -47,20 +47,23 @@ namespace Fibunacci.PerezDamas
         }
         private static int suma(int a, int b, int c, int profundidad)
         {
+            int khe = 0;
             if(profundidad == c){
                 Console.WriteLine($"{c} ");
                 return c;
             }
             else{
                 profundidad ++;
-                if(profundidad == c){
+                if(profundidad == c)
+                    khe = c+1;
+                if(profundidad == c || khe > c){
                     int n = a;
                     int m = b;
 
                     a = m;
                     b = n+m;
                 }
-                Console.WriteLine($"Valor de C = {c}, Valor de a = {a}, Valor de b = {b}");
+                Console.WriteLine($"Valor de C = {c}, la profundidad es: {profundidad}, Valor de a = {a}, Valor de b = {b}");
                 int r = b + suma(a,b,c,profundidad);
                 Console.WriteLine($"{r} ");
                 return r;
