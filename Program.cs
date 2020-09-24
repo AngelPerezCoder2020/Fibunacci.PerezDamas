@@ -47,25 +47,21 @@ namespace Fibunacci.PerezDamas
         }
         private static int suma(int a, int b, int c, int profundidad)
         {
-            int khe = 0;
             if(profundidad == c){
-                Console.WriteLine($"{c} ");
-                return c;
+                Console.WriteLine(0);
+                return 0;
             }
             else{
                 profundidad ++;
-                if(profundidad == c)
-                    khe = c+1;
-                if(profundidad == c || khe > c){
-                    int n = a;
-                    int m = b;
+                int n = a;
+                int m = b;
 
-                    a = m;
-                    b = n+m;
-                }
+                a = m;
+                b = n+m;
+
                 Console.WriteLine($"Valor de C = {c}, la profundidad es: {profundidad}, Valor de a = {a}, Valor de b = {b}");
                 int r = b + suma(a,b,c,profundidad);
-                Console.WriteLine($"{r} ");
+                Console.WriteLine($"{a} ");
                 return r;
             }
         }
