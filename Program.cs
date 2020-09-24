@@ -23,6 +23,7 @@ namespace Fibunacci.PerezDamas
                             int rep = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine(" \n \nEnter to Watch ur result...");
                             Console.ReadKey();
+                            Console.WriteLine(" ");
                             if(suma(0,1,rep,profundidad)==1)
                                 Console.WriteLine(0);
                             Console.ReadKey();
@@ -32,6 +33,7 @@ namespace Fibunacci.PerezDamas
                                 option2 = Convert.ToInt32(Console.ReadLine());
                                 if(option2 != 1 && option2 != 2)
                                     Console.WriteLine("The selected option does not exist, ENTER and try again...");
+                                    Console.ReadKey();
                             }while(option2 != 1 && option2 != 2);
                         }while(option2 != 2);                    
                         break;
