@@ -6,6 +6,7 @@ namespace Fibunacci.PerezDamas
     {
         static void Main(string[] args)
         {
+            int profundidad = 0;
             int option = 0;
             do{
                 Console.Clear();
@@ -22,7 +23,7 @@ namespace Fibunacci.PerezDamas
                             int rep = Convert.ToInt32(Console.ReadLine()) + 1;
                             Console.WriteLine(" \n \nEnter to Watch ur result...");
                             Console.ReadKey();
-                            Console.WriteLine($"El Ultimo Resultado de tu Algoritmo es: {suma(0,1,rep)}");
+                            Console.WriteLine($"El Ultimo Resultado de tu Algoritmo es: {suma(0,1,rep,profundidad)}");
                             Console.ReadKey();
                             do{
                                 Console.Clear();
@@ -44,10 +45,8 @@ namespace Fibunacci.PerezDamas
                 }
             }while(option != 2);
         }
-        private static int suma(int a, int b, int c)
+        private static int suma(int a, int b, int c, int profundidad)
         {
-            int profundidad = 0;
-
             if(profundidad == c){
                 Console.WriteLine($"{c} ");
                 return c;
@@ -62,7 +61,7 @@ namespace Fibunacci.PerezDamas
                     b = n+m;
                 }
                 Console.WriteLine($"Valor de C = {c}, Valor de a = {a}, Valor de b = {b}");
-                int r = b + suma(a,b,c);
+                int r = b + suma(a,b,c,profundidad);
                 Console.WriteLine($"{r} ");
                 return r;
             }
